@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./eventos.css" />
+    <title>Eventos en JS</title>
+  </head>
+  <body>
+    <h1 class="contenedor">Paing Grid</h1>
+    <div id="colors-containers">
+      <div class="color red" id="red"></div>
+      <div class="color black" id="black"></div>
+      <div class="color white" id="white"></div>
+      <div class="color yellow" id="yellow"></div>
+      <div class="color green" id="green"></div>
+      <div class="color brown" id="brown"></div>
+      <div class="color purple" id="purple"></div>
+      <div class="color peru" id="peru"></div>
+    </div>
+
+    <h2 class="contenedor">
+      El color seleccionado es <strong id="selected-color"></strong>
+    </h2>
+
+    <table class="contenedor">
+      <tbody>
+        <tr>
+          <td class="painterBlock" id="square-0-0"></td>
+          <td class="painterBlock" id="square-0-1"></td>
+          <td class="painterBlock" id="square-0-2"></td>
+          <td class="painterBlock" id="square-0-3"></td>
+          <td class="painterBlock" id="square-0-4"></td>
+          <td class="painterBlock" id="square-0-5"></td>
+          <td class="painterBlock" id="square-0-6"></td>
+          <td class="painterBlock" id="square-0-7"></td>
+          <td class="painterBlock" id="square-0-8"></td>
+          <td class="painterBlock" id="square-0-9"></td>
+          <td class="painterBlock" id="square-0-10"></td>
+          <td class="painterBlock" id="square-0-11"></td>
+          <td class="painterBlock" id="square-0-12"></td>
+        </tr>
+        <tr>
+          <td class="painterBlock" id="square-1-0"></td>
+          <td class="painterBlock" id="square-1-1"></td>
+          <td class="painterBlock" id="square-1-2"></td>
+          <td class="painterBlock" id="square-1-3"></td>
+          <td class="painterBlock" id="square-1-4"></td>
+          <td class="painterBlock" id="square-1-5"></td>
+          <td class="painterBlock" id="square-1-6"></td>
+          <td class="painterBlock" id="square-1-7"></td>
+          <td class="painterBlock" id="square-1-8"></td>
+          <td class="painterBlock" id="square-1-9"></td>
+          <td class="painterBlock" id="square-1-10"></td>
+          <td class="painterBlock" id="square-1-11"></td>
+          <td class="painterBlock" id="square-1-12"></td>
+        </tr>
+        <tr>
+          <td class="painterBlock" id="square-2-0"></td>
+          <td class="painterBlock" id="square-2-1"></td>
+          <td class="painterBlock" id="square-2-2"></td>
+          <td class="painterBlock" id="square-2-3"></td>
+          <td class="painterBlock" id="square-2-4"></td>
+          <td class="painterBlock" id="square-2-5"></td>
+          <td class="painterBlock" id="square-2-6"></td>
+          <td class="painterBlock" id="square-2-7"></td>
+          <td class="painterBlock" id="square-2-8"></td>
+          <td class="painterBlock" id="square-2-9"></td>
+          <td class="painterBlock" id="square-2-10"></td>
+          <td class="painterBlock" id="square-2-11"></td>
+          <td class="painterBlock" id="square-2-12"></td>
+        </tr>
+        <tr>
+          <td class="painterBlock" id="square-3-0"></td>
+          <td class="painterBlock" id="square-3-1"></td>
+          <td class="painterBlock" id="square-3-2"></td>
+          <td class="painterBlock" id="square-3-3"></td>
+          <td class="painterBlock" id="square-3-4"></td>
+          <td class="painterBlock" id="square-3-5"></td>
+          <td class="painterBlock" id="square-3-6"></td>
+          <td class="painterBlock" id="square-3-7"></td>
+          <td class="painterBlock" id="square-3-8"></td>
+          <td class="painterBlock" id="square-3-9"></td>
+          <td class="painterBlock" id="square-3-10"></td>
+          <td class="painterBlock" id="square-3-11"></td>
+          <td class="painterBlock" id="square-3-12"></td>
+        </tr>
+        <tr>
+          <td class="painterBlock" id="square-4-0"></td>
+          <td class="painterBlock" id="square-4-1"></td>
+          <td class="painterBlock" id="square-4-2"></td>
+          <td class="painterBlock" id="square-4-3"></td>
+          <td class="painterBlock" id="square-4-4"></td>
+          <td class="painterBlock" id="square-4-5"></td>
+          <td class="painterBlock" id="square-4-6"></td>
+          <td class="painterBlock" id="square-4-7"></td>
+          <td class="painterBlock" id="square-4-8"></td>
+          <td class="painterBlock" id="square-4-9"></td>
+          <td class="painterBlock" id="square-4-10"></td>
+          <td class="painterBlock" id="square-4-11"></td>
+          <td class="painterBlock" id="square-4-12"></td>
+        </tr>
+        <tr>
+          <td class="painterBlock" id="square-5-0"></td>
+          <td class="painterBlock" id="square-5-1"></td>
+          <td class="painterBlock" id="square-5-2"></td>
+          <td class="painterBlock" id="square-5-3"></td>
+          <td class="painterBlock" id="square-5-4"></td>
+          <td class="painterBlock" id="square-5-5"></td>
+          <td class="painterBlock" id="square-5-6"></td>
+          <td class="painterBlock" id="square-5-7"></td>
+          <td class="painterBlock" id="square-5-8"></td>
+          <td class="painterBlock" id="square-5-9"></td>
+          <td class="painterBlock" id="square-5-10"></td>
+          <td class="painterBlock" id="square-5-11"></td>
+          <td class="painterBlock" id="square-5-12"></td>
+        </tr>
+        <tr>
+          <td class="painterBlock" id="square-6-0"></td>
+          <td class="painterBlock" id="square-6-1"></td>
+          <td class="painterBlock" id="square-6-2"></td>
+          <td class="painterBlock" id="square-6-3"></td>
+          <td class="painterBlock" id="square-6-4"></td>
+          <td class="painterBlock" id="square-6-5"></td>
+          <td class="painterBlock" id="square-6-6"></td>
+          <td class="painterBlock" id="square-6-7"></td>
+          <td class="painterBlock" id="square-6-8"></td>
+          <td class="painterBlock" id="square-6-9"></td>
+          <td class="painterBlock" id="square-6-10"></td>
+          <td class="painterBlock" id="square-6-11"></td>
+          <td class="painterBlock" id="square-6-12"></td>
+        </tr>
+        <tr>
+          <td class="painterBlock" id="square-7-0"></td>
+          <td class="painterBlock" id="square-7-1"></td>
+          <td class="painterBlock" id="square-7-2"></td>
+          <td class="painterBlock" id="square-7-3"></td>
+          <td class="painterBlock" id="square-7-4"></td>
+          <td class="painterBlock" id="square-7-5"></td>
+          <td class="painterBlock" id="square-7-6"></td>
+          <td class="painterBlock" id="square-7-7"></td>
+          <td class="painterBlock" id="square-7-8"></td>
+          <td class="painterBlock" id="square-7-9"></td>
+          <td class="painterBlock" id="square-7-10"></td>
+          <td class="painterBlock" id="square-7-11"></td>
+          <td class="painterBlock" id="square-7-12"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button id="reset-btn">Reset</button>
+
+    <script src="./eventos.js"></script>
+  </body>
+</html>
