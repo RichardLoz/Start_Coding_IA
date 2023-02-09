@@ -5,10 +5,10 @@
 // console.log("Pongo la cafetera")
 // for (let time = 120; time >= 0; time--){
 //     console.log(time)
-//     if (time === 0)    console.log("El cafe esta listo")   
+//     if (time === 0)    console.log("El cafe esta listo")
 // }
 // console.log("Desayuno")
-// console.log("Me pongo a trabajar")  
+// console.log("Me pongo a trabajar")
 
 // TODO: SetTimeout()  ==> Difererir la ejecucion de una tarea en el tiempo
 
@@ -21,7 +21,6 @@
 // console.log("Me doy un baño")
 // console.log("Desayuno")
 
-
 // TODO: setTimeout Examples
 
 // Ejemplo 1
@@ -32,13 +31,13 @@
 
 // Ejemplo 2
 
-// setTimeout(() => console.log("Mario"),1000) 
+// setTimeout(() => console.log("Mario"),1000)
 // console.log("Juan")
 // console.log("Pedro")
 
 // Ejemplo 3
 
-// setTimeout(() => console.log("Mario"),0) 
+// setTimeout(() => console.log("Mario"),0)
 // console.log("Juan")
 // console.log("Pedro")
 
@@ -53,7 +52,6 @@
 
 // console.log("Pedro")
 
-
 // TODO: PROMESAS
 
 // Ejemplo 1
@@ -61,7 +59,7 @@
 // const pagarConTarjeta = (precio) => {
 //     const limite = 10000
 //     for (let index = 0; index < 3000; index++) {
-//         console.log("Conectando ...") 
+//         console.log("Conectando ...")
 //     }
 
 //     precio < limite ? console.log("Compra Aprobada") : console.log("Compra Rechazada")
@@ -79,7 +77,6 @@
 // }
 
 // console.log(pagarConTarjeta(1000))
-
 
 // TODO: Las promesas tienen 3 estados (Pendiente, Resuelta, Rechazada)
 
@@ -137,8 +134,6 @@
 
 // procesarPagos()
 
-
-
 // TODO: FETCH
 
 // const getDataFromApi = async () => {
@@ -152,8 +147,6 @@
 // }
 
 // getDataFromApi()
-
-
 
 // TODO: Asincronismo y CALL STACK - Part II
 
@@ -171,7 +164,6 @@
 // console.log("Juan")
 // console.log("Pedro")
 
-
 // Ejemplo 3
 // async function fetchSomething (){
 //     await new Promise ((resolve) => {
@@ -187,7 +179,6 @@
 // fetchSomething()
 
 // console.log("Pedro")
-
 
 // Ejemplo 4
 // setTimeout(() => console.log("Mario"),5)
@@ -208,7 +199,6 @@
 
 // TODO: El callback Queue siempre elije primero una promesa antes que un setTimeout
 
-
 // TODO: EJERCICIOS!!
 
 // TODO: EJERCICIOS 1
@@ -226,7 +216,7 @@
 // Martin
 // Juan
 
-// setTimeout(()=> console.log("Juan"),10) 
+// setTimeout(()=> console.log("Juan"),10)
 // console.log("Mario")
 // console.log("Martin")
 
@@ -236,7 +226,7 @@
 // Mario
 
 // console.log("Juan")
-// setTimeout(()=> console.log("Mario"),10) 
+// setTimeout(()=> console.log("Mario"),10)
 // console.log("Martin")
 
 // Vuelta 3
@@ -250,8 +240,6 @@
 // },0)
 // console.log("Martin")
 
-
-
 // Vuelta 4
 // Mario
 // Juan
@@ -261,21 +249,144 @@
 // console.log("Mario")
 // setTimeout (() => console.log("Martin"),10)
 
-
 // TODO: EJERCICIO 2
 
 // Utilizando setTimeout, crear una funcion que actue como un temporizador, haciendo una cuenta regresiva desde el numero de segundos que se pase como argumentos hasta llegar a 0, Para ese ejercicios no se puede utilizar ningun tipo de loop (for, while, etc)
 // PISTA: Para resolver el ejercicio, pueden investigar un poco sobre funciones recursivas
 
-const temporizador = (second) => {
-    setTimeout(() => {
-        if (second < 0) return
-            console.log(second)
-            temporizador(second - 1)
+// const temporizador = (second) => {
+//   setTimeout(() => {
+//     if (second < 0) return;
+//     console.log(second);
+//     temporizador(second - 1);
+//   }, 1000);
+// };
 
+// temporizador(10);
 
-            
-    },1000)
-}
+// TODO: EJERCICIO 3
 
-temporizador(10)
+// Utilizando la API de GITHUB (https://api.github.com) realizar las siguientes tareas:
+
+// a) Obtener una lista de los repositorios publicos (Documentacion de la API: https://docs.github.com/es/rest/reference/repos)
+
+// const baseUrl = "https://api.github.com";
+
+// const getPublicRepositories = async () => {
+//   const response = await fetch(`${baseUrl}/repositories`);
+//   const jsonResponse = await response.json();
+//   //console.log(jsonResponse);
+//   return jsonResponse;
+// };
+
+// getPublicRepositories();
+
+// b) Generar una funcion que a partir de la respuesta del punto anterior, retorne un array de los nombres de usuario de los owners de los repositorios listados
+
+// const getOwnersNames = async () => {
+//   const repositories = await getPublicRepositories();
+
+//   const namesArray = repositories.map((repo) => repo.owner.login);
+
+//   console.log(namesArray);
+// };
+
+// getOwnersNames();
+
+// c) Tomar de la respuesta al primero repositorio, y listar todos los repositorios del owner.
+// PISTA: Para  ver el endpoint al cual deberas pegarle para traer los repositorios del owner, deberas inspeccionar la informacion que recibes dentro del primer request
+
+// const getRepositoriesFromOwner = async () => {
+//   const repositories = await getPublicRepositories();
+//   const firstRepositorie = repositories[0];
+//   const reposEndpoint = firstRepositorie.owner.repos_url;
+
+//   const reposResponse = await fetch(reposEndpoint);
+//   const jsonReposResponse = await reposResponse.json();
+
+//   console.log(jsonReposResponse);
+// };
+
+// getRepositoriesFromOwner();
+
+// TODO: JSON
+// Metodos
+
+// const body = {
+//   id: 1,
+//   title: "foo",
+//   body: "bar",
+//   userId: 1,
+// };
+
+// console.log(body);
+
+// // Convertir a JSON ==> stringify
+
+// const parsedBody = JSON.stringify(body);
+// console.log(parsedBody); // El type de un JSON es "STRING"
+
+// // Convertir JSON a JS
+// const parsedToJs = JSON.parse(parsedBody);
+// console.log(parsedToJs);
+
+// TODO: PROTOCOLO HTTP
+
+// GET ==> Solicitar datos o informacion al servidor
+// POST ==> Enviar informacion al servidor
+// PUT ==> Modificar informacion en el servidor
+// DELETE ==> Borrar informacion del servidor
+
+// TODO: GET
+// fetch("https://jsonplaceholder.typicode.com/posts/1") // Para fetch el metodo "GET" es el default
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// TODO: POST
+// fetch("https://jsonplaceholder.typicode.com/posts", {
+//   method: "POST",
+//   body: JSON.stringify({
+//     title: "foo",
+//     body: "bar",
+//     userId: 1,
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// TODO: PUT
+// fetch("https://jsonplaceholder.typicode.com/posts/1", {
+//   method: "PUT",
+//   body: JSON.stringify({
+//     id: 1,
+//     title: "foo",
+//     body: "bar",
+//     userId: 1,
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// TODO: PATCH ==> Actualiza parcialmente el recurso
+// fetch("https://jsonplaceholder.typicode.com/posts/1", {
+//   method: "PATCH",
+//   body: JSON.stringify({
+//     title: "foo",
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// TODO: DELETE
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+  method: "DELETE",
+});

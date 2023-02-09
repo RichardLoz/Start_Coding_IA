@@ -1,4 +1,4 @@
-// DESTRUCTURING
+// TODO: DESTRUCTURING  ==> Nos permite desarmar un objeto, array, etc
 
 /* const names1 = ["Richard", "Daniela", "Terry"];
 const names2 = ["Astrid", "Sophia"];
@@ -44,14 +44,14 @@ console.log(firstName, job); */
 
 // TODO: SPREAD OPERATION ==>se representa con los 3 puntos "..."
 
-const names1 = ["Richard", "Daniela", "Terry"];
-const names2 = ["Astrid", "Sophia"];
+// const names1 = ["Richard", "Daniela", "Terry"];
+// const names2 = ["Astrid", "Sophia"];
 
-const persona1 = {
-  firstName: "Richard",
-  job: "Developer",
-  city: "Capital",
-};
+// const persona1 = {
+//   firstName: "Richard",
+//   job: "Developer",
+//   city: "Capital",
+// };
 
 // TODO: EN ARRAYS
 
@@ -123,10 +123,10 @@ console.log(mergedPersona); */
 //TODO:  Otro ejemplo
 // Creo una variable con la modificacion de la ciudad y lo paso al merfedPersona con SPREAD, tambien sirve para agregar atributos
 
-const updatedData = {
-  city: "Vicente Lopez",
-};
+// const updatedData = {
+//   city: "Vicente Lopez",
+// };
 
-const mergedPersona = { ...persona1, ...updatedData };
+// const mergedPersona = { ...persona1, ...updatedData };
 
-console.log(mergedPersona);
+// console.log(mergedPersona);
